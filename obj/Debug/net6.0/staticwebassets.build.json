@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "e+MhCJZoB19Hp129UurZO67iCnxF7u7kQuURJUxBdiQ=",
+  "Source": "Dojodachi",
+  "BasePath": "_content/Dojodachi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Dojodachi\\wwwroot",
+      "Source": "Dojodachi",
+      "ContentRoot": "C:\\Users\\nicol\\Desktop\\Bootcamp Coding Dojo c#\\ASP.NET Core\\Dojodachi\\wwwroot\\",
+      "BasePath": "_content/Dojodachi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\nicol\\Desktop\\Bootcamp Coding Dojo c#\\ASP.NET Core\\Dojodachi\\wwwroot\\css\\styles.css",
+      "SourceId": "Dojodachi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nicol\\Desktop\\Bootcamp Coding Dojo c#\\ASP.NET Core\\Dojodachi\\wwwroot\\",
+      "BasePath": "_content/Dojodachi",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    }
+  ]
+}

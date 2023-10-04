@@ -1,0 +1,65 @@
+@{
+    string title;
+    int? fullness = Context.Session.GetInt32("Fullness");
+    int? happiness = Context.Session.GetInt32("Happiness");
+    int? meals = Context.Session.GetInt32("Meals");
+    int? energy = Context.Session.GetInt32("Energy");
+    string? message = Context.Session.GetString("Message");
+    bool win = false;
+    bool lost = false;
+    if (fullness > 100 && happiness > 100 && energy > 100)
+    {
+        win = true;
+        title = "You Won!";
+    }
+    else if (fullness < 0 || happiness < 0)
+    {
+        lost = true;
+        title = "You Lost...";
+    }
+    else
+    {
+        title = "Dojodachi!";
+    }
+    ViewData["Title"] = title;
+}
+<div class="stats">
+    <p>Fullness: @fullness</p>
+    <p>Happiness: @happiness</p>
+    <p>Meals: @meals</p>
+    <p>Energy: @energy</p>
+</div>
+<div class="screen">
+    <img src="~/img/Dog.svg" alt="dojo animal">
+    <p>@message</p>
+</div>
+<div class="actions">
+    @{
+        if (!(win || lost))
+        {
+            <form asp-action="Operation" asp-controller="Dojodashi" method="post">
+                <input type="hidden" name="operationId" value="1">
+                <button type="submit" class="btn1">Feed</button>
+            </form>
+            <form asp-action="Operation" asp-controller="Dojodashi" method="post">
+                <input type="hidden" name="operationId" value="2">
+                <button type="submit" class="btn1">Play</button>
+            </form>
+            <form asp-action="Operation" asp-controller="Dojodashi" method="post">
+                <input type="hidden" name="operationId" value="3">
+                <button type="submit" class="btn1">Work</button>
+            </form>
+            <form asp-action="Operation" asp-controller="Dojodashi" method="post">
+                <input type="hidden" name="operationId" value="4">
+                <button type="submit" class="btn1">Sleep</button>
+            </form>
+        }
+        else
+        {
+            <form asp-action="Operation" asp-controller="Dojodashi" method="post" class="buttonrestart">
+                <input type="hidden" name="operationId" value="5">
+                <button type="submit" class="btn1">Restart?</button>
+            </form>
+        }
+    }
+</div>
